@@ -11,6 +11,6 @@ ENV variables:
 Volume:
 Map a folder on your host machine to container folder /data. Backups will be stored in /data/BLOG_NAME.
 
-The container will exit once it has finished backing up the requested blog. I suggest running it with a regular cron job (I have mine set for daily at 1:00am). It should only download new posts on each run.
+The container will exit once it has finished backing up the requested blog. I suggest running it with a regular cron job (I have mine set for daily at 1:00am). You can run an incremental backup by using the -i option in BACKUP_ARGS.
 
 If you want to back up more than one blog, you can just set a different BLOG_NAME variable for each one and keep everything else the same. Your backups will be stored together, with each one placed in a BLOG_NAME subfolder.
