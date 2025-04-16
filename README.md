@@ -1,5 +1,5 @@
 # tumblr-utils-docker
-This is a Docker implementation of [cebtenzzre's fork of the tumblr-utils backup app](https://github.com/cebtenzzre/tumblr-utils/tree/master).
+This is a Docker implementation of [cebtenzzre's fork of the tumblr-utils backup app](https://github.com/cebtenzzre/tumblr-utils/tree/master). Available on dockerhub at [robotfishe/tumblr-utils](https://hub.docker.com/repository/docker/robotfishe/tumblr-utils/).
 
 You will need to set three environment variables and mount a volume for backups to be stored in.
 
