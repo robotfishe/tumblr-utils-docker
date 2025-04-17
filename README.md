@@ -8,6 +8,8 @@ ENV variables:
 - BACKUP_ARGS: Arguments to be sent to the tumblr-backup script. The container will run if this is left blank. See the [tumblr-utils documentation](https://github.com/cebtenzzre/tumblr-utils/blob/master/README.md#2-usage) for details.
 - API_KEY: Your tumblr oauth key. See the [tumblr-utils documentation](https://github.com/cebtenzzre/tumblr-utils/blob/master/README.md#1-installation) and [this github issue](https://github.com/cebtenzzre/tumblr-utils/issues/28) for help.
 
+I recommend including a --threads flag in your backup arguments and keeping it low. This seems to reduce the number of HTTP 429 errors when saving notes, and it also solved a problem I was having with running this container on my Unraid server where the large number of files being written in quick succession would cause the server to crash as it tried to compute parity for all of them. I run mine with --threads=2.
+
 Volume:
 Map a folder on your host machine to container folder /data. Backups will be stored in /data/BLOG_NAME.
 
